@@ -27,10 +27,11 @@ def ing(dst_addr, src_addr):
     return And(p,q)
 
 #table
+#table
 def table(dst_addr, src_addr):
     #define control table
-    p = And(src_addr[0] < 1, NoA(dst_addr, src_addr))
-    q = And(src_addr[0] >= 1, ing(dst_addr, src_addr)) 
+    p = And(src_addr[0] < 2**47, NoAction(dst_addr, src_addr))
+    q = And(src_addr[0] >= 2**47, MyAction(dst_addr, src_addr)) 
     return Or(p,q)
 
 #pipeline
