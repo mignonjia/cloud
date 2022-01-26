@@ -1,0 +1,8 @@
+CREATE DATABASE project2;
+CREATE USER 'mhuo4'@'localhost' IDENTIFIED BY 'ae472d8c7c3533e92cb27379801cc00bf45e09b0462094fe76e2df9463f9249a';
+GRANT INSERT ON project2.* TO 'mhuo4'@'localhost';
+GRANT UPDATE ON project2.* TO 'mhuo4'@'localhost';
+GRANT SELECT ON project2.* TO 'mhuo4'@'localhost';
+USE project2;
+
+
